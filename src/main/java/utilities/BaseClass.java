@@ -40,7 +40,8 @@ public class BaseClass {
             cap.setBrowserName(BrowserType.CHROME);
 
             //Set Browser to ThreadLocalMap
-            driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+            //driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+            driver.set(new RemoteWebDriver(new URL("http://hub:4444/wd/hub"), cap));
 
         }
         else if(browser.equalsIgnoreCase("firefox"))
@@ -48,7 +49,8 @@ public class BaseClass {
 
             DesiredCapabilities cap = new DesiredCapabilities();
             cap.setBrowserName(BrowserType.FIREFOX);
-            driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+            //driver.set(new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap));
+            driver.set(new RemoteWebDriver(new URL("http://hub:4444/wd/hub"), cap));
 
         }
 

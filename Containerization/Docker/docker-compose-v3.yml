@@ -13,10 +13,6 @@ services:
       GRID_MAX_SESSION: 16
       GRID_BROWSER_TIMEOUT: 3000
       GRID_TIMEOUT: 3000
-    links:
-      - jenkins
-
-
 
   chrome:
     image: selenium/node-chrome-debug
@@ -54,7 +50,10 @@ services:
       - hub
 
   jenkins:
-    image: jenkins/jenkins:lts
+    image: jenkins-maven
+    build:
+      context: .
+      dockerfile: Dockerfile
     container_name: jenkins
     privileged: true
     user: root
@@ -64,6 +63,10 @@ services:
     ports:
       - "8080:8080"
       - "50000:50000"
+    depends_on:
+      - hub
+    links:
+      - hub
 
 
 
