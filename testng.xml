@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="utilities.Listeners" />
+    </listeners>
+    <test verbose="1" preserve-order="true" name="Login Tests" >
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="HomePageNavigation"> </class>
+        </classes>
+     </test>
+    <test verbose="2" preserve-order="true" name="Search Tests" >
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="ProductSearch"> </class>
+        </classes>
+    </test>
+</suite>

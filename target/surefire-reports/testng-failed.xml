@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <listeners>
+    <listener class-name="utilities.Listeners"/>
+  </listeners>
+  <test name="Search Tests(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="ProductSearch">
+        <methods>
+          <include name="productSearchTest"/>
+          <include name="initialiseDriver"/>
+        </methods>
+      </class> <!-- ProductSearch -->
+      <class name="HomePageNavigation">
+        <methods>
+          <include name="initialiseDriver"/>
+        </methods>
+      </class> <!-- HomePageNavigation -->
+    </classes>
+  </test> <!-- Search Tests(failed) -->
+  <test name="Login Tests(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="ProductSearch">
+        <methods>
+          <include name="initialiseDriver"/>
+        </methods>
+      </class> <!-- ProductSearch -->
+      <class name="HomePageNavigation">
+        <methods>
+          <include name="initialiseDriver"/>
+          <include name="loginTest"/>
+        </methods>
+      </class> <!-- HomePageNavigation -->
+    </classes>
+  </test> <!-- Login Tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

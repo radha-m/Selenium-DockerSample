@@ -1,0 +1,5 @@
+[INFO ] 2021-02-25 13:38:16.948 [TestNG] HomePageNavigation - Driver initialised
+[INFO ] 2021-02-25 13:38:17.081 [TestNG] ProductSearch - Driver initialised
+[INFO ] 2021-02-25 13:38:23.972 [TestNG] ProductSearch - Driver Closed
+[INFO ] 2021-02-25 13:38:25.701 [TestNG] HomePageNavigation - Navigated successfully
+[INFO ] 2021-02-25 13:38:25.835 [TestNG] HomePageNavigation - Driver Closed
